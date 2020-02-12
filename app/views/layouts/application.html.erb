@@ -4,12 +4,19 @@
     <title>RailsSimpleAirbnb</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/880e4a326a.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="nav bg-light d-flex justify-content-between align-items-center px-4 py-2">
+      <h4><a href="/flats" class="text-decoration-none text-muted">Simple Airbnb</a></h4>
+      <a href="/flats/new" class="btn btn-outline-primary text-decoration-none">Add flat</a>
+    </div>
+    <div class="container mt-4">
+      <%= yield %>
+    </div>
   </body>
 </html>

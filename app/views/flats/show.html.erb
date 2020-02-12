@@ -1,0 +1,20 @@
+<div class="flat w-50 border-bottom pb-5 mb-3">
+  <div class="banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));">
+    <img src="https://source.unsplash.com/random" alt="banner-image">
+  </div>
+  <h3><%= @flat.name %></h3>
+  <p><%= @flat.description %></p>
+  <p><%= @flat.address %></p>
+  <i class="fas fa-user-friends mr-2"></i><%= @flat.number_of_guests %>
+  <i class="fas fa-euro-sign ml-5 mr-2"></i><%= @flat.price_per_night %>
+</div>
+<p>
+  <i class="fas fa-pencil-alt mr-2"></i><%= link_to 'Edit', edit_flat_path %>  |  <i class="fas fa-trash-alt mr-2"></i><%= link_to 'Delete', flat_path, method: :delete, data: { confirm: 'Are you sure'} %>
+</p>
+
+
+<p><%= link_to 'Back to list', flats_path, class: 'm' %></p>
+
+
+
+
